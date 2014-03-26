@@ -1,0 +1,7 @@
+.DS_Store
+*.swp
+
+Rakefile
+
+_site/
+images/
