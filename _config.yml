@@ -1,0 +1,16 @@
+name: blog.takuti.me
+description: This is my blog.
+url: http://blog.takuti.me/
+
+markdown: redcarpet
+highlighter: nil # not use pygments because of using google-code-prettify
+
+exclude: ['Rakefile']
+include: ['.htaccess']
+
+excerpt_separator: "<!--more-->"
+
+permalink: /:year/:month/:title/
+
+paginate: 5
+paginate_path: 'page/:num/'
