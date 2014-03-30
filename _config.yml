@@ -5,7 +5,7 @@ url: http://blog.takuti.me/
 markdown: redcarpet
 highlighter: nil # not use pygments because of using google-code-prettify
 
-exclude: ['Rakefile']
+exclude: ['Rakefile', 'tools']
 include: ['.htaccess']
 
 excerpt_separator: "<!--more-->"
