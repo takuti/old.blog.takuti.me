@@ -4,7 +4,7 @@ module Jekyll
 
       @site = site
       @base = base
-      @dir = dir
+      @dir = dir.downcase.gsub(" ","-")
       @name = 'index.html'
 
       self.process(@name)

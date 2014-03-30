@@ -6,11 +6,11 @@ layout: default
   <p class="meta clearfix">
     <span class="left">{{ page.date | date: '%B %-d, %Y' }}</span>
     <span class="right">
-      <span class="cat-tag"><span class="symbol">folder </span><a href="/category/{{ page.categories.first }}">{{ page.categories.first }}</a></span>
+      <span class="cat-tag"><span class="symbol">folder </span><a href="/category/{{ page.categories.first | downcase | replace: ' ', '-' }}">{{ page.categories.first }}</a></span>
       {% unless page.tags == empty %}
       <span class="cat-tag"><span class="symbol">tag </span>
       {% for tag in page.tags %}
-      <a href="/tag/{{ tag }}">{{ tag }}</a>
+      <a href="/tag/{{ tag | downcase | replace: ' ', '-' }}">{{ tag }}</a>
       {% endfor %}
       </span>
       {% endunless %}
