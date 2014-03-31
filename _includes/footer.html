@@ -1,3 +1,8 @@
 <footer>
+  <div id="tags" class="clearfix">
+  {% for tag in site.tags %}
+  <span class="tag"><a href="/tag/{{ tag[0] | downcase | replace: ' ', '-' }}">{{ tag[0] }} ({{ tag[1].size }})</a></span>
+  {% endfor %}
+  </div>
   &copy; 2012 takuti.
 </footer>

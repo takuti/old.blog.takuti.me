@@ -159,7 +159,7 @@ header {
 #container {
   font-size: 15px;
   width: 700px;
-  margin: 70px auto;
+  margin: 50px auto;
   .left {
     display: block;
     float: left;
@@ -176,8 +176,30 @@ header {
 footer {
   text-align: center;
   font-size: 0.8em;
+  width: 700px;
   margin: 0 auto;
   margin-bottom: 1em;
+  #tags {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+    margin-bottom: 50px;
+    .tag a {
+      display: block;
+      float: left;
+      padding: 5px 10px;
+      margin: 5px;
+      background: #cdd;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+       border-radius: 4px;
+      text-decoration: none;
+      &:hover {
+        color: #eee;
+        background: $primary-color;
+      }
+    }
+  }
 }
 
 .clearfix {
@@ -240,7 +262,7 @@ pre, code {
 
 /*--- responsive ---*/
 @media screen and (max-width: 767px) {
-  #container {
+  #container, footer {
     padding: 0 10%;
     width: 80%;
   }
@@ -250,9 +272,6 @@ pre, code {
       padding: 0 10%;
       height: $header-height*2;
     }
-  }
-  footer {
-    width: 100%;
   }
   article {
     img {
