@@ -234,3 +234,27 @@ pre, code {
   font-size: 1.3em;
   line-height: 1.3em;
 }
+
+/*--- responsive ---*/
+@media screen and (max-width: 767px) {
+  #container {
+    padding: 0 10%;
+    width: 80%;
+  }
+  header {
+    #header-content {
+      width: 80%;
+      padding: 0 10%;
+      height: $header-height*2;
+    }
+  }
+  footer {
+    width: 100%;
+  }
+  article {
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
