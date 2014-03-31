@@ -10,10 +10,12 @@ title: TOP
     <p class="meta clearfix">
       <span class="left">{{ post.date | date: '%B %-d, %Y' }}</span>
       <span class="right">
-        <span class="cat-tag"><span class="symbol">folder </span><a href="/category/{{ post.categories.first | downcase | replace: ' ', '-' }}">{{ post.categories.first }}</a></span>
         {% unless post.tags == empty %}
-        <span class="cat-tag"><span class="symbol">tag </span>
+        <span class="tag"><span class="symbol">tag </span>
         {% for tag in post.tags %}
+        {% unless forloop.first %}
+        ,&nbsp;
+        {% endunless %}
          <a href="/tag/{{ tag | downcase | replace: ' ', '-' }}">{{ tag }}</a>
         {% endfor %}
         </span>
