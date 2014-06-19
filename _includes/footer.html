@@ -1,14 +1,10 @@
 <footer>
   <div id="tags" class="clearfix">
   {% for tag in site.tags %}
-  <span class="tag"><a href="/tag/{{ tag[0] | downcase | replace: ' ', '-' }}">{{ tag[0] }} ({{ tag[1].size }})</a></span>
-  {% endfor %}
-  </div>
+  {% capture t %}{{ tag[0] | downcase | replace:' ','-' }}{% endcapture %}
 
-  <div class="advertise">
-    <marquee><strong><a href="http://yomogimochi.com/">
-        [PR] ネコでもわかる女の子のカラダの仕組み
-    </a></strong></marquee>
+  <span class="tag"><a href="/tag/{{ t }}">{{ site.tagname[t]  }} ({{ tag[1].size }})</a></span>
+  {% endfor %}
   </div>
 
   &copy; 2012 takuti.

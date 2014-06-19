@@ -17,7 +17,8 @@ title: TOP
         {% unless forloop.first %}
         ,&nbsp;
         {% endunless %}
-         <a href="/tag/{{ tag | downcase | replace: ' ', '-' }}">{{ tag }}</a>
+        {% capture t %}{{ tag | downcase | replace:' ','-' }}{% endcapture %}
+         <a href="/tag/{{ t }}">{{ site.tagname[t] }}</a>
         {% endfor %}
         </span>
         {% endunless %}
@@ -27,7 +28,7 @@ title: TOP
     <div class="post clearfix">
       {{ post.excerpt }}
       {% if post.content contains '<!--more-->' %}
-      <span class="right bold"><a href="{{ post.url }}">&gt; Read More</a></span>
+      <span class="bold"><a href="{{ post.url }}"><br />続きを読む</a></span>
       {% endif %}
     </div>
   </article>
@@ -38,21 +39,11 @@ title: TOP
 <div class="pagination">
 
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; prev</a>
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; まえ</a>
   {% endif %}
 
-  {% for page in (1..paginator.total_pages) %}
-    {% if page == paginator.page %}
-      <span class="bold">{{ page }}</span>
-    {% elsif page == 1 %}
-      <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-    {% else %}
-      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-    {% endif %}
-  {% endfor %}
-
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">next &raquo;</a>
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">つぎ &raquo;</a>
   {% endif %}
 </div>
 {% endif %}

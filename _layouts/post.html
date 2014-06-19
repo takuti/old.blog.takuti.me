@@ -12,7 +12,8 @@ layout: default
       {% unless forloop.first %}
       ,&nbsp;
       {% endunless %}
-      <a href="/tag/{{ tag | downcase | replace: ' ', '-' }}">{{ tag }}</a>
+      {% capture t %}{{ tag | downcase | replace:' ','-' }}{% endcapture %}
+      <a href="/tag/{{ t }}">{{ site.tagname[t] }}</a>
       {% endfor %}
       </span>
       {% endunless %}
