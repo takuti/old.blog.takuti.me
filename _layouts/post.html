@@ -2,27 +2,23 @@
 layout: default
 ---
 <article>
-  <h2>{{ page.title }}</h2>
   <p class="meta clearfix">
-    <span class="left">{{ page.date | date: '%B %-d, %Y' }}</span>
-    <span class="right">
-      {% unless page.tags == empty %}
-      <span class="tag"><span class="symbol">tag </span>
-      {% for tag in page.tags %}
-      {% unless forloop.first %}
-      ,&nbsp;
-      {% endunless %}
-      {% capture t %}{{ tag | downcase | replace:' ','-' }}{% endcapture %}
-      <a href="/tag/{{ t }}">{{ site.tagname[t] }}</a>
-      {% endfor %}
-      </span>
-      {% endunless %}
-    </span>
+    {% assign flg = false %}
+    {{ page.date | date: '%B %-d, %Y' }} &nbsp;
+    {% unless page.tags == empty %}
+    {% for tag in page.tags %}
+    {% capture t %}{{ tag | downcase | replace:' ','-' }}{% endcapture %}
+    {% if t == 'diary' %} {% assign flg = true %} {% endif %}
+    [<a href="/tag/{{ t }}">{{ site.tagname[t] }}</a>]
+    {% endfor %}
+    {% endunless %}
   </p>
+  <h2>{{ page.title }}</h2>
 
   <div class="post">
     {{ content }}
   </div>
+  {% if flg == false %}
   <div id="disqus_thread"></div>
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -37,6 +33,7 @@ layout: default
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  {% endif %}
 
 </article>
 
