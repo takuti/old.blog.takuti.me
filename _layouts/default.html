@@ -3,7 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name=keywords content="takuti,たくち" />
-    <meta name=description content="Blog about Artificial Intelligence, Machine Learning and so on..." />
+    <meta name=description content="
+      {% if page.description %}
+      {{ page.description }}
+      {% else %}
+      この広い世界に、ひとつでもたくさんの足跡を残そう。
+      {% endif %}
+    " />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
     <title>
