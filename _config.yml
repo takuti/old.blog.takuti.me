@@ -10,7 +10,7 @@ include: ['.htaccess']
 
 excerpt_separator: "<!--more-->"
 
-permalink: /:year:month:day.html
+permalink: /:year/:month/:title/
 
 paginate: 5
 paginate_path: 'page/:num/'
