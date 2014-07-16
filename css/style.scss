@@ -34,7 +34,11 @@ a {
 }
 
 article {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
+  .meta {
+    font-size: 0.8em;
+    color: $sub-color;
+  }
   h2 {
     font-size: 1.2em;
     a {
@@ -144,6 +148,8 @@ nav {
     float:right;
   }
   ul {
+    margin-left: 0;
+    padding-left: 2em;
     list-style-type: square;
   }
 }
@@ -239,11 +245,17 @@ pre, code {
 
 /*--- responsive ---*/
 @media screen and (max-width: 767px) {
-  #container, footer {
+  body {
+    width: 100%;
+  }
+  #container, footer, nav {
     padding: 0 10%;
     width: 80%;
   }
   header {
+    padding-right: 10%;
+    padding-left: 10%;
+    width: 80%;
     #header-content {
       width: 80%;
       padding: 0 10%;
