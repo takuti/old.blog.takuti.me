@@ -76,13 +76,15 @@ article {
   }
   dt {
     padding-top: 0.5em;
+    font-size: 0.8em;
+    color: $sub-color;
     &:first-child {
       border-top: 1px solid #eee;
     }
   }
   dd {
     margin: 0;
-    padding: 0 0 0.5em 1em;
+    padding: 0 0 0.5em 0;
     border-bottom: 1px solid #eee;
   }
 }
