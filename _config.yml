@@ -12,7 +12,7 @@ excerpt_separator: "<!--more-->"
 
 permalink: /:year/:month/:title/
 
-paginate: 5
+paginate: 30
 paginate_path: 'page/:num/'
 
 tagname:

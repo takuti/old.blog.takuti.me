@@ -64,13 +64,13 @@ article {
 #entry-list {
   .date {
     display: inline-block;
-    width: 200px;
   }
   .tag {
-    color: $primary-color;
+    color: $sub-color;
     display: inline-block;
     margin-left: 1em;
     a {
+      color: $sub-color;
       text-decoration: none;
     }
   }
