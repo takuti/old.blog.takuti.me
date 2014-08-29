@@ -11,6 +11,7 @@ title: TOP
   <span class="date">
     {{ post.date | date: '%B %-d, %Y' }}
   </span>
+<!--
   &nbsp;
   <span class="tag">
     {% unless post.tags == empty %}
@@ -20,6 +21,7 @@ title: TOP
     {% endfor %}
     {% endunless %}
   </span>
+-->
   </dt>
   <dd><a href="{{ post.url }}">{{ post.title }}</a></dd>
 {% endfor %}
