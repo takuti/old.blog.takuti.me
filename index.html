@@ -23,7 +23,10 @@ title: TOP
   </span>
 -->
   </dt>
-  <dd><a href="{{ post.url }}">{{ post.title }}</a></dd>
+  <dd>
+    <a href="{{ post.url }}">{{ post.title }}</a>
+    <a href="http://b.hatena.ne.jp/entry/{{ site.baseurl }}{{ post.url }}"><img src="http://b.hatena.ne.jp/entry/image/{{ site.baseurl }}{{ post.url }}"></a>
+  </dd>
 {% endfor %}
 </dl>
 <!--
@@ -54,11 +57,11 @@ title: TOP
 <div class="pagination">
 
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; つぎ</a>
+    <a href="{{ paginator.previous_page_path }}">&laquo; つぎ</a>
   {% endif %}
 
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">まえ &raquo;</a>
+    <a href="{{ paginator.next_page_path }}">まえ &raquo;</a>
   {% endif %}
 </div>
 {% endif %}
