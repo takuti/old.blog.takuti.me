@@ -3,12 +3,10 @@ layout: default
 ---
 <article>
   <p class="meta clearfix">
-    {% assign flg = false %}
     {{ page.date | date: '%B %-d, %Y' }} &nbsp;
     {% unless page.tags == empty %}
     {% for tag in page.tags %}
     {% capture t %}{{ tag | downcase | replace:' ','-' }}{% endcapture %}
-    {% if t == 'diary' %} {% assign flg = true %} {% endif %}
     [<a href="/tag/{{ t }}">{{ site.tagname[t] }}</a>]
     {% endfor %}
     {% endunless %}
@@ -18,7 +16,6 @@ layout: default
   <div class="post">
     {{ content }}
   </div>
-  {% if flg == false %}
   <div id="disqus_thread"></div>
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -33,7 +30,6 @@ layout: default
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-  {% endif %}
 
 </article>
 
