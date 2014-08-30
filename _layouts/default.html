@@ -3,7 +3,7 @@
   <head>
     <meta name="google-site-verification" content="LuC5G9RgHqMbCs-j6JqTMh9NjBFDlnmtliW1JOyotbQ" />
     <meta charset="utf-8">
-    <meta name=keywords content="takuti,たくち{% if page.keywords %}{% for key in page.keywords %},{{ key }}{% endfor %}{% endif %}" />
+    <meta name=keywords content="{% if page.keywords %}{% for key in page.keywords %}{% if forloop.first == false %},{% endif %}{{ key }}{% endfor %}{% else %}takuti,たくち{% endif %}" />
     <meta name=description content="{% if page.description %}{{ page.description }}{% else %}百合とコーヒーが好きですね。{% endif %}" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
