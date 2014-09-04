@@ -6,10 +6,10 @@
 @import "normalize.css";
 
 // scss variable
-$primary-color: #333;
-$sub-color: #666;
-$sub-sub-color: #999;
-$sub-sub-sub-color: #ccc;
+$primary-color: #555;
+$sub-color: #888;
+$sub-sub-color: #bbb;
+$sub-sub-sub-color: #ddd;
 $content-width: 700px;
 $header-height: 45px;
 
@@ -18,7 +18,7 @@ html, body {
   height: 100%;
   color: $primary-color;
   font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   margin: 0px;
   padding: 0px;
 }
@@ -124,6 +124,7 @@ header {
   height: $header-height;
   margin: 0 auto;
   padding: $header-height/2 0 $header-height/4 0;
+  text-align: center;
 
   h1 {
     font-size: 2em;
@@ -143,9 +144,10 @@ nav {
   width: $content-width;
   margin: 0 auto;
   font-size: 0.9em;
+  text-align: center;
   a {
     display: inline-block;
-    margin-right: 2em;
+    margin: 0 1em;
     color: $sub-color;
     text-decoration: none;
     &:visited {
@@ -234,12 +236,10 @@ pre, code {
 
 blockquote {
   display: block;
-  padding: 9.5px;
-  background-color: #f5f5f5;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
+  margin: 0;
+  padding: 0;
+  padding-left: 1em;
+  border-left: 2px solid $sub-color;
   white-space: pre;
   white-space: pre-wrap;
   word-break: break-all;
@@ -295,16 +295,16 @@ blockquote {
     width: 100%;
   }
   #container, footer, nav {
-    padding: 0 10%;
-    width: 80%;
+    padding: 0 5%;
+    width: 90%;
   }
   header {
-    padding-right: 10%;
-    padding-left: 10%;
-    width: 80%;
+    padding-right: 5%;
+    padding-left: 5%;
+    width: 90%;
     #header-content {
-      width: 80%;
-      padding: 0 10%;
+      width: 90%;
+      padding: 0 5%;
       height: $header-height*2;
     }
   }
