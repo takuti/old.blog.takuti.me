@@ -31,6 +31,8 @@
 
     {% include footer.html %}
 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
     <script src="/google-code-prettify/prettify.js"></script>
     <script>prettyPrint();</script>
 
@@ -65,7 +67,26 @@
       {% for post in site.posts %}
       posts.push("{{ post.url }}");
       {% endfor %}
-      document.getElementById('random').href = posts[Math.floor(Math.random() * posts.length)];
+      $('#random').attr('href',posts[Math.floor(Math.random() * posts.length)]);
+
+      // index yearly toggle
+      jQuery(function(){
+        $('.past-year').hide();
+        $('h3.year').click(function(){
+          var ud = $(this).children('.up-down');
+          $(this).next().slideToggle('normal',function(){
+            if (ud.hasClass('down')) {
+              ud.html('up');
+              ud.removeClass('down');
+              ud.addClass('up');
+            } else if (ud.hasClass('up')) {
+              ud.html('down');
+              ud.removeClass('up');
+              ud.addClass('down');
+            }
+          });
+        });
+      });
     </script>
 
   </body>
