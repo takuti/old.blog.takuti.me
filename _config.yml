@@ -16,9 +16,6 @@ excerpt_separator: "<!--more-->"
 
 permalink: /:year/:month/:title/
 
-paginate: 30
-paginate_path: 'page/:num/'
-
 tagname:
   diary: 日記
   books: 読書
