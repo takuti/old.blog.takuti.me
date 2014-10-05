@@ -171,28 +171,6 @@ footer {
   width: $content-width;
   margin: 0 auto;
   margin-bottom: 1em;
-  #tags {
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-    padding: 10px 0;
-    margin-bottom: 50px;
-    .tag a {
-      display: block;
-      float: left;
-      height: 20px;
-      padding: 5px 10px;
-      margin: 5px;
-      background: $sub-sub-sub-color;
-      -webkit-border-radius: 4px;
-      -moz-border-radius: 4px;
-       border-radius: 4px;
-      text-decoration: none;
-      &:hover {
-        color: #eee;
-        background: $primary-color;
-      }
-    }
-  }
 }
 
 .clearfix {
