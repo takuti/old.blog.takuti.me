@@ -41,6 +41,7 @@ article {
   }
   h2 {
     font-size: 1.2em;
+    margin-bottom: 1em;
     a {
       text-decoration: none;
     }
@@ -93,15 +94,11 @@ article {
   dt {
     padding-top: 0.5em;
     font-size: 0.8em;
-    color: $sub-color;
-    &:first-child {
-      border-top: 1px solid #eee;
-    }
+    color: $sub-sub-color;
   }
   dd {
     margin: 0;
     padding: 0 0 0.5em 0;
-    border-bottom: 1px solid #eee;
     a {
       font-weight: bold;
       text-decoration: none;
@@ -113,11 +110,6 @@ article {
   margin-bottom: 2em;
 }
 
-.pagination {
-  text-align: center;
-  margin-bottom: 2em;
-}
-
 header {
   font-family:'Source Sans Pro',sans-serif;
   width: $content-width;
@@ -125,33 +117,28 @@ header {
   margin: 0 auto;
   padding: $header-height/2 0 $header-height/4 0;
   text-align: center;
-
-  h1 {
-    font-size: 2em;
-    font-weight: normal;
-    margin: 0;
-    a {
-      .light {
-        color: $sub-sub-color;
-      }
-      text-decoration: none;
-    }
+  a { text-decoration: none; }
+  img {
+    width: 50px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
   }
 }
 
 nav {
   font-family:'Source Sans Pro',sans-serif;
   width: $content-width;
-  margin: 0 auto;
+  margin: .9em auto;
   font-size: 0.9em;
   text-align: center;
   a {
     display: inline-block;
-    margin: 0 1em;
-    color: $sub-color;
+    margin: 0 .5em;
+    color: $sub-sub-sub-color;
     text-decoration: none;
     &:visited {
-      color: $sub-color;
+      color: $sub-sub-sub-color;
     }
     &:hover {
       color: $primary-color;
@@ -252,8 +239,6 @@ blockquote {
 
 /*--- fonts ---*/
 .bold { font-weight:bold; }
-.special-font { font-family: 'Cabin Sketch', 'cursive'; }
-
 
 @font-face {
     font-family: 'LigatureSymbols';

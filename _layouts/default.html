@@ -16,7 +16,6 @@
     </title>
 
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css' />
-    <link href='http://fonts.googleapis.com/css?family=Cabin+Sketch:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/css/style.css">
     <link href="/google-code-prettify/tomorrow-night-eighties.css" rel="stylesheet">
 
@@ -58,6 +57,15 @@
           }
         }
       };
+    </script>
+
+    <script>
+      // random posts
+      var posts = [];
+      {% for post in site.posts %}
+      posts.push("{{ post.url }}");
+      {% endfor %}
+      document.getElementById('random').href = posts[Math.floor(Math.random() * posts.length)];
     </script>
 
   </body>
