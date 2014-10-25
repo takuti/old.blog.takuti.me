@@ -17,7 +17,7 @@ html, body {
   background: #fff;
   height: 100%;
   color: $primary-color;
-  font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+  font-family: 'Merriweather', serif;
   font-size: 16px;
   margin: 0px;
   padding: 0px;
@@ -111,7 +111,6 @@ article {
 }
 
 header {
-  font-family:'Source Sans Pro',sans-serif;
   width: $content-width;
   height: $header-height;
   margin: 0 auto;
@@ -127,7 +126,6 @@ header {
 }
 
 nav {
-  font-family:'Source Sans Pro',sans-serif;
   width: $content-width;
   margin: .9em auto;
   font-size: 0.9em;
