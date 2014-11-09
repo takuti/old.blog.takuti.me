@@ -47,6 +47,17 @@ article {
     }
   }
   .post {
+    a {
+      color: #208DC3;
+      text-decoration: none;
+      &:visited {
+        color: #208DC3;
+      }
+      &:hover {
+        color: #006EA5;
+        text-decoration: underline;
+      }
+    }
     h3 {
       font-size: 1.1em;
       margin: 2em 0 1em 0;
