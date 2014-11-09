@@ -60,7 +60,7 @@
         $('.past-year').hide();
         $('h3.year').click(function(){
           var ud = $(this).children('.up-down');
-          $(this).next().slideToggle('normal',function(){
+          $(this).next().fadeToggle(0, function(){
             if (ud.hasClass('down')) {
               ud.html('up');
               ud.removeClass('down');
