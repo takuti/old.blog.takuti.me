@@ -54,25 +54,6 @@
       posts.push("{{ post.url }}");
       {% endfor %}
       $('#random').attr('href',posts[Math.floor(Math.random() * posts.length)]);
-
-      // index yearly toggle
-      jQuery(function(){
-        $('.past-year').hide();
-        $('h3.year').click(function(){
-          var ud = $(this).children('.up-down');
-          $(this).next().fadeToggle(0, function(){
-            if (ud.hasClass('down')) {
-              ud.html('up');
-              ud.removeClass('down');
-              ud.addClass('up');
-            } else if (ud.hasClass('up')) {
-              ud.html('down');
-              ud.removeClass('up');
-              ud.addClass('down');
-            }
-          });
-        });
-      });
     </script>
 
   </body>
