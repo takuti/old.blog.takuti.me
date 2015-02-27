@@ -1,6 +1,7 @@
 require 'open-uri'
 require 'json'
 
+=begin
 def sub_twitter_url(content)
   content.scan(/(https?:\/\/twitter\.com\/[a-zA-Z0-9_]+\/status\/([0-9]+)\/?)/).each { |url, id|
     json = open("https://api.twitter.com/1/statuses/oembed.json?id=#{id}").read
@@ -38,3 +39,4 @@ module Jekyll
     end
   end
 end
+=end

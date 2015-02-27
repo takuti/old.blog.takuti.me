@@ -61,10 +61,12 @@ article {
     h3 {
       font-size: 1.1em;
       margin: 2em 0 1em 0;
+      padding-bottom: 5px;
+      border-bottom: 1px solid $sub-sub-sub-color;
     }
     img {
       display: block;
-      margin: 0 auto;
+      margin: .5em 0;
     }
     table {
       margin: 0 auto;

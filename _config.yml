@@ -4,8 +4,8 @@ url: http://blog.takuti.me/
 
 baseurl: http://blog.takuti.me
 
-#markdown: redcarpet
-markdown: CustomizedMarkdownParser
+markdown: redcarpet
+#markdown: CustomizedMarkdownParser
 redcarpet:
   extensions: [tables,autolink,strikethrough]
 highlighter: nil # not use pygments because of using google-code-prettify
