@@ -42,6 +42,8 @@ article {
   h2 {
     font-size: 1.2em;
     margin-bottom: 1em;
+    background: url(/images/line.gif) repeat-x bottom left;
+    padding-bottom: 15px;
     a {
       text-decoration: none;
     }
@@ -67,6 +69,10 @@ article {
     img {
       display: block;
       margin: .5em 0;
+    }
+    hr {
+      border: 0;
+      border-top: 1px solid $sub-sub-sub-color;
     }
     table {
       margin: 0 auto;
@@ -217,9 +223,8 @@ pre, code {
 blockquote {
   display: block;
   margin: 0;
-  padding: 0;
-  padding-left: 1em;
-  border-left: 2px solid $sub-color;
+  padding: 1em;
+  background: #eee;
   white-space: pre;
   white-space: pre-wrap;
   word-break: break-all;
