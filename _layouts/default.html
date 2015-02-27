@@ -55,6 +55,19 @@
       posts.push("{{ post.url }}");
       {% endfor %}
       $('#random').attr('href',posts[Math.floor(Math.random() * posts.length)]);
+
+      // language chooser
+      $('#language .l').click(function() {
+        $('.l').removeClass('active');
+        $(this).addClass('active');
+        if ($(this).text() == '日本語') {
+          $('.entry-list .lang-ja').show();
+          $('.entry-list .lang-en').hide();
+        } else {
+          $('.entry-list .lang-ja').hide();
+          $('.entry-list .lang-en').show();
+        }
+      });
     </script>
 
   </body>

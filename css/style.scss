@@ -167,6 +167,24 @@ nav {
   }
 }
 
+#language {
+  font-size: 0.9em;
+  text-align: center;
+  margin: -40px 0 40px 0;
+  span {
+    display: inline-block;
+    margin: 0 .5em;
+    &.l {
+      cursor: pointer;
+      color: $sub-sub-sub-color;
+      &:hover,
+      &.active {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
 #container {
   font-size: 15px;
   width: $content-width;
