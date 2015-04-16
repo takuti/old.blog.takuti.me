@@ -11,3 +11,4 @@ do
   fi
 done
 
+echo 'Redirect 301 / http://takuti.me/' >> .htaccess

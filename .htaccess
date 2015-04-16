@@ -179,3 +179,4 @@ Redirect 301 /practical-machine-learning/ http://takuti.me/note/practical-machin
 Redirect 301 /2014/11/09/hello-english/ http://takuti.me/note/hello-english/
 Redirect 301 /2014/11/hello-english/ http://takuti.me/note/hello-english/
 Redirect 301 /hello-english/ http://takuti.me/note/hello-english/
+Redirect 301 / http://takuti.me/
